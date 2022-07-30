@@ -8,8 +8,7 @@ created a file called onboard.sh and copied the shell script in the https://gith
 
 ![3  shell script for the onboard users](https://user-images.githubusercontent.com/79456052/181996264-388e19e4-f99b-4e83-8296-f15fdf629f7a.png)
 
-Created the project folder called shell using the *mkdir shell* command and copied the onboard.sh file into the /home/ubunty/shell directory using the command *mv onboard.sh /home/ubuntu/shell* directory.
-Created the id_rsa, id_rsa.pub and names.csv files using the command *touch id_rsa id_rsa.pub names.csv*
+Created the project folder called shell using the *mkdir shell* command and copied the onboard.sh file into the /home/ubunty/shell directory using the command *mv onboard.sh /home/ubuntu/shell* Created the id_rsa, id_rsa.pub and names.csv files using the command *touch id_rsa id_rsa.pub names.csv*
 
 ![2a  the commands used before ](https://user-images.githubusercontent.com/79456052/181996115-d3dc1cdd-2a49-40e1-9729-6bb0d017609b.png)
 
@@ -17,7 +16,7 @@ Created the id_rsa, id_rsa.pub and names.csv files using the command *touch id_r
 Added the public keu from the documentation in the id_rsa.pub file. 
 ![4  create id_rsa pub](https://user-images.githubusercontent.com/79456052/181996440-b5128826-338d-45dc-9626-e24235091779.png)
 
-Added the  private key in the documetnation in the id_rsa file 
+Added the  private key in the documetation in the id_rsa file 
 ![5  create id_rsa file](https://user-images.githubusercontent.com/79456052/181996505-f3d8e936-0b07-49a2-bdb5-f46df66e3ed4.png)
 
 added the names of the 20 new Linux users needed to be onboarded in the names.csv file.
@@ -30,7 +29,6 @@ Changed the path of the id_rsa.pub in the onborad.sh  to /home/ubuntu/shell/id_r
 switched  user to root using the command *sudo su* and made onboard.sh an excutable file using the command *sudo chmod +x onboard.sh*
 
 ![8  su user to root and Make onboard sh an excutable file using the command sudo chmod +x onboard](https://user-images.githubusercontent.com/79456052/181996700-2fa21483-f37c-4091-be04-c27caf6e6ee7.png)
-
 
 Ran the excutable file ./onboard.sh creating all the users in the names.csv file.
 
@@ -46,10 +44,7 @@ Used the command *cat /etc/passwd | awk -F':' '{ print $1}' | xargs -n1 groups* 
 
 ![ 12  Confirm that the   developer group has been created](https://user-images.githubusercontent.com/79456052/181999876-27c5be26-da0e-4f91-80ab-c2ac0d85d173.png)
 
-In Testing a few of the users randomly, and ensuring connection to the server using the private key and the public key, the following steps were carried out
-
-Created a auxproj.pem private key file on my local machine, added the content of the private key in the documetation to the auxproj.pem file, changed the permissions on the auxproj.pem using the command *sudo chmod 600 auxproj.pem* to keep the private key protected.
-sshed  successfully into the server using the user David with the command *ssh -i auxproj.pem David@3.87.63.24
+In Testing a few of the users randomly and ensuring connection to the server using the private key and the public key, I created a auxproj.pem private key file on my local machine, added the content of the private key in the documetation to the auxproj.pem file, changed the permissions on the auxproj.pem using the command *sudo chmod 600 auxproj.pem* to keep the private key protected. Sshed successfully into the server using the user David with the command *ssh -i auxproj.pem David@3.87.63.24
 
 ![13](https://user-images.githubusercontent.com/79456052/182002266-1c67f3af-b586-4289-9d5a-40ebf646e228.png)
 
@@ -59,7 +54,7 @@ sshed  successfully into the server using the user David with the command *ssh -
 ![12c](https://user-images.githubusercontent.com/79456052/182002101-41f6bc01-0e1d-4ee2-acb1-14bf9ce6afd0.png)
 
 
-logged out and sshed successfully  into the server using another user James with the command *ssh -i auxproj.pem Jams@3.87.63.24
+logged out and sshed successfully  into the server using another user James with the command *ssh -i auxproj.pem Jams@3.87.63.24* The screnshot below also shows that James and David are not sudoers i.e meaning they can't carryout priviledged commands using sudo e.g using  command like *sudo apt update*
 
 ![12d](https://user-images.githubusercontent.com/79456052/182002212-596f4298-1364-474c-ab97-25a14cd96c90.png)
 
