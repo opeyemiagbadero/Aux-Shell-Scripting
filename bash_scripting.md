@@ -33,3 +33,44 @@ switched  user to root using the command *sudo su* and made onboard.sh an excuta
 
 
 Ran the excutable file ./onboard.sh creating all the users in the names.csv file.
+
+![9  all users in the CSV file are created](https://user-images.githubusercontent.com/79456052/181997302-8c5662af-4bd9-4d53-a528-56b7f7765ba5.png)
+
+![10  confirm that the users have been created in the :home directory](https://user-images.githubusercontent.com/79456052/181997332-92293ce1-eeca-4b90-a104-e6153f0ffd8d.png)
+
+Used the command *cat /etc/passwd | awk -F':' '{ print $1}' | xargs -n1 groups* to filter the names of the users in the developers group
+
+
+![11  used a commant cat:etc   to folter the names of the users in the developers group](https://user-images.githubusercontent.com/79456052/181999465-b14dd508-9bd2-4dd7-9c78-a340b1e37e02.png)
+
+
+![ 12  Confirm that the   developer group has been created](https://user-images.githubusercontent.com/79456052/181999876-27c5be26-da0e-4f91-80ab-c2ac0d85d173.png)
+
+In Testing a few of the users randomly, and ensuring connection to the server using the private key and the public key, the following steps were carried out
+
+Created a auxproj.pem private key file on my local machine, added the content of the private key in the documetation to the auxproj.pem file, changed the permissions on the auxproj.pem using the command *sudo chmod 600 auxproj.pem* to keep the private key protected.
+sshed  successfully into the server using the user David with the command *ssh -i auxproj.pem David@3.87.63.24
+
+![13](https://user-images.githubusercontent.com/79456052/182002266-1c67f3af-b586-4289-9d5a-40ebf646e228.png)
+
+
+![12b](https://user-images.githubusercontent.com/79456052/182001888-1e60fb26-cbde-4a8e-9e51-a374f133fcd5.png)
+
+![12c](https://user-images.githubusercontent.com/79456052/182002101-41f6bc01-0e1d-4ee2-acb1-14bf9ce6afd0.png)
+
+
+logged out and sshed successfully  into the server using another user James with the command *ssh -i auxproj.pem Jams@3.87.63.24
+
+![12d](https://user-images.githubusercontent.com/79456052/182002212-596f4298-1364-474c-ab97-25a14cd96c90.png)
+
+
+
+
+
+
+
+
+
+
+
+
